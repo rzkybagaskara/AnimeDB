@@ -5,3 +5,6 @@ Website to search anime and manga based on user input from search using jikan.mo
 
 ## API
 https://docs.api.jikan.moe/#section/Information
+
+##Design
+getbootstrap.com
