@@ -1,0 +1,27 @@
+*{
+    scrollbar-width: thin;
+    font-family: 'Inter', sans-serif;
+}
+
+.container-button{
+    position: relative;
+}
+
+.dark-btn{
+    border-radius: 20pxf;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+}
+
+.dark-mode{
+    background-color: #314158;
+}
+
+.card-color{
+    background-color: #486581;
+}
+
+.white-text{
+    color: #FFFF
+}

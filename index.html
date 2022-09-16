@@ -8,12 +8,28 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.rtl.min.css" integrity="sha384-+4j30LffJ4tgIMrq9CwHvn0NjEvmuDCOfk6Rpg2xg7zgOxWWtLtozDEEVvBPgHqE" crossorigin="anonymous">
 
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
     <title>AnimeDB</title>
   </head>
   <body>
+
+    <!-- Dark Mode Button -->
+    <div class="container-button">
+      <div class="dark-btn">
+        <button type="button" class="toggle-button" onclick="darkMode()">
+          <img src="img/dark_mode_FILL0_wght400_GRAD0_opsz48.svg" alt="icon_darkmode">
+        </button>
+      </div>
+    </div>
+    
       
 <div class="container justify-content-center">
-          <div class="row">
+          <div class="row title-animeDB">
               <h2 class="text-center mt-4">AnimeDB</h2>
               <h5 class="text-center mt-3">Search the information for your favorite anime and manga here!</h5>
         </div>
@@ -30,17 +46,8 @@
 
 
         <!-- Cards-->
-        <div class=" row anime-container px-2">
-                  <!-- <div class="col-md-4 my-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="img/david bowie kira yoshikage.jpeg" class="card-img-top" alt="">
-                        <div class="card-body">
-                          <h5 class="card-title">Jojo Part 3</h5>
-                          <p class="card-text">20</p>
-                          <a href="#" class="btn btn-primary mt-auto modal-detail-button" data-bs-toggle = "modal" data-bs-target = "#animeDetailModal" data-animeid = >Details</a>
-                        </div>
-                      </div>
-                </div> -->
+        <div class="row anime-container px-2">
+
         </div>
 
         <!-- Modal -->

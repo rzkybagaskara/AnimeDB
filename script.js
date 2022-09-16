@@ -7,19 +7,6 @@
 // const animeByCategories = data.results;
 // global scope
 
-let arrayAnimes = [
-  {
-    title: 'Naruto',
-    year: '2004',
-    char: 'Naruto Uzumaki, Sasuke, Sakura',
-  },
-  {
-    title: 'Yuru Camp',
-    year: '2019',
-    char: 'Nadeshiko, Rin',
-  },
-];
-
 const searchButton = document.querySelector('.search-button');
 searchButton.addEventListener('click', async function () {
   const inputKeyword = document.querySelector('.input-keyword');
@@ -64,3 +51,21 @@ function showAnime(e) {
     </div>
 </div>`;
 }
+
+function darkMode() {
+  let dark = document.body;
+  let whiteTitle = document.querySelector('.title-animeDB');
+  dark.classList.toggle('dark-mode');
+
+  // if there is dark class in body then add class white-text inside class title-animeDB
+  if (dark.classList.contains('dark-mode')) {
+    whiteTitle.classList.toggle('white-text');
+  } else {
+    whiteTitle.classList.remove('white-text');
+  }
+}
+// Planned for card dark mode
+/*let darkAnime = document.querySelector('.card-body');
+darkAnime.forEach((e) => {
+  e.classList.toggle('card-color');
+});*/
