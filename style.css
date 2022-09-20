@@ -3,6 +3,13 @@
     font-family: 'Inter', sans-serif;
 }
 
+/* Truncate the title */
+.card-title{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow:hidden;
+}
+
 .container-button{
     position: relative;
 }
@@ -16,10 +23,6 @@
 
 .dark-mode{
     background-color: #314158;
-}
-
-.card-color{
-    background-color: #486581;
 }
 
 .white-text{

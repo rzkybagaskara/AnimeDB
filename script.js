@@ -4,7 +4,6 @@
 // https://jikan.docs.apiary.io/#introduction/user-anime/manga-lists-are-being-removed-from-1st-may,-2022
 // https://docs.api.jikan.moe/#tag/anime/operation/getAnimeReviews
 // https://www.youtube.com/watch?v=AI5lsNeVyO8
-// const animeByCategories = data.results;
 // global scope
 
 const searchButton = document.querySelector('.search-button');
@@ -51,6 +50,11 @@ function showAnime(e) {
     </div>
 </div>`;
 }
+
+// kalau dia ada title english, maka tampilkan title english, kalau tidak ada maka tampilkan title japanese
+// function showTitle(titles){
+//   return(showTitle)
+// }
 
 function darkMode() {
   let dark = document.body;
