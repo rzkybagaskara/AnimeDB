@@ -36,30 +36,40 @@ function updateUI(animes) {
 }
 
 function showAnime(e) {
-  return `<div class="col-md-3 my-4">
+  return `<div id = "cardAnime" class="col-md-3 my-4">
   <div class="card" style="width: 100%">
     <div class="embed-responsive embed-responsive-4by3">
       <img src="${e.images.jpg.image_url}" class="card-img-top h-75">
     </div>
       <div class="card-body">
-        <h5 class="card-title">${e.title}</h5>
-        <h6 class="card-subtitle">Source: ${e.source}</h6>
-        <p class="card-text">Total episodes: ${e.episodes}</p>
-        <a href="${e.url}" class="btn btn-primary mt-auto modal-detail-button" target = "_blank">Details</a>
+      <h5 class="card-title">${e.title_english ? e.title_english : e.title}</h5>
+      <h6 class="card-subtitle">Source: ${e.source}</h6>
+      <p class="card-text">Total episodes: ${e.episodes}</p>
+      <a href="${e.url}" class="btn btn-primary mt-auto modal-detail-button" target = "_blank">Details</a>
       </div>
-    </div>
-</div>`;
+      </div>
+      </div>`;
 }
-
 // kalau dia ada title english, maka tampilkan title english, kalau tidak ada maka tampilkan title japanese
-// function showTitle(titles){
-//   return(showTitle)
-// }
 
 function darkMode() {
+  let card = document.querySelectorAll('#cardAnime .card');
   let dark = document.body;
   let whiteTitle = document.querySelector('.title-animeDB');
   dark.classList.toggle('dark-mode');
+
+  card.forEach((e) => {
+    e.classList.toggle('border-0');
+    e.classList.toggle('shadow');
+  });
+
+  // toggle for card dark mode
+  let darkAnime = document.querySelectorAll('.card-body');
+  darkAnime.forEach((e) => {
+    e.classList.toggle('dark-mode');
+    e.classList.toggle('white-text');
+    e.classList.toggle('border-light');
+  });
 
   // if there is dark class in body then add class white-text inside class title-animeDB
   if (dark.classList.contains('dark-mode')) {
@@ -68,8 +78,5 @@ function darkMode() {
     whiteTitle.classList.remove('white-text');
   }
 }
+
 // Planned for card dark mode
-/*let darkAnime = document.querySelector('.card-body');
-darkAnime.forEach((e) => {
-  e.classList.toggle('card-color');
-});*/
